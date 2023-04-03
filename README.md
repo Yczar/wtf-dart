@@ -17,7 +17,6 @@ Please be sure to include a brief description of what your example demonstrates,
 # Table of Contents
 
 - [💪🏻 Motivation](#-motivation)
-- [✍🏻 Notation](#-notation)
 - [👀 Examples](#-examples)
   - [null is not null](#null-is-not-null)
   - [This code does nothing](#this-code-does-nothing)
@@ -39,6 +38,19 @@ Please be sure to include a brief description of what your example demonstrates,
   - [Recursive function with no base case](#reecursive-function-with-no-base-case)
   - [Recursive function with no base case](#reecursive-function-with-no-base-case)
   - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  
+ 
+# 💪🏻 Motivation
+
+> "Programming is not about what you know, it's about what you can figure out."
+> 
+> &mdash; _Chris Pine_
+
+WTF-Dart is a repository created with the goal of showcasing surprising or unconventional behavior in Dart programming language. The repository contains a collection of Dart code snippets that demonstrate unexpected results or non-intuitive behavior in the language, which can be useful for developers who are learning Dart or working with it on a regular basis.
+
+By exploring these code snippets and learning about the quirks and surprises of the Dart language, developers can gain a deeper understanding of how the language works and how to avoid potential pitfalls. This repository is also a valuable resource for educators who teach Dart programming, as it provides real-world examples of how the language can behave in unexpected ways.
+
+Ultimately, WTF-Dart aims to help developers write more reliable and efficient code in Dart by providing them with a deeper understanding of the language's behavior. Whether you're a beginner or an experienced developer, this repository is a great resource for learning about the nuances of the Dart language and improving your coding skills.
 
 ## Null is not null
 ```dart

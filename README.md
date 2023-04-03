@@ -408,9 +408,9 @@ This Dart code snippet demonstrates the use of the null-aware operator with an o
 
 # 🤝 Supporting
 
-| Service     |       Link        |                                                                       Action                                                                       |
-| ----------- | :---------------: | :------------------------------------------------------------------------------------------------------------------------------------------------: |
-| **Patreon** | [Become a patron] | <a href="https://www.patreon.com/user?u=84015491"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="120px"></a> |
+| Service     |      Link       |                                                                       Action                                                                       |
+| ----------- | :-------------: | :------------------------------------------------------------------------------------------------------------------------------------------------: |
+| **Patreon** | Become a patron | <a href="https://www.patreon.com/user?u=84015491"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="120px"></a> |
 
 ## License
 

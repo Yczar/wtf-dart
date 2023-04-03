@@ -1,5 +1,7 @@
 ## Welcome to the "WTF Dart" repository!
 
+inspired by the [wtfjs](https://github.com/denysdovhan/wtfjs) repository
+
 This repository is a collection of Dart code snippets and examples that may make you say "WTF" (What the F\*ck) at first glance. However, these snippets are meant to be educational and demonstrate some of the more unusual or unexpected behaviors of the Dart programming language.
 
 ## How to Use

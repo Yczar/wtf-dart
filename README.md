@@ -52,6 +52,8 @@ By exploring these code snippets and learning about the quirks and surprises of 
 
 Ultimately, WTF-Dart aims to help developers write more reliable and efficient code in Dart by providing them with a deeper understanding of the language's behavior. Whether you're a beginner or an experienced developer, this repository is a great resource for learning about the nuances of the Dart language and improving your coding skills.
 
+> **⚠️ Note:** If you enjoy reading this document, please, [consider supporting the author of this collection](#-supporting).
+
 ## Null is not null
 ```dart
  var a = Null;
@@ -377,6 +379,13 @@ void main() {
 ### 💡 Explanation:
 
 This Dart code snippet demonstrates the use of the null-aware operator with an optional variable. The null-aware operator "?." is used to call the `toUpperCase()` method on the `message` string variable, which is declared as nullable using the `String?` syntax. However, since the message variable is null, the output of the expression is also null, which may be unexpected to developers who are not familiar with the null-aware operator.
+
+
+# 🤝 Supporting
+
+| Service          |                     Link                     |                                                                   Action                                                                   |
+| ---------------- | :------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------------------: |
+| **Patreon**      |        [Become a patron][patreon-url]        | <a href="patreon.com/user?u=84015491"><img src="https://c5.patreon.com/external/logo/become_a_patron_button@2x.png" width="120px"></a> |
 
 ## License
 

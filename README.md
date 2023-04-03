@@ -25,11 +25,11 @@ Please be sure to include a brief description of what your example demonstrates,
   - [Recursive function with no base case](#recursive-function-with-no-base-case)
   - [Type Mismatch and Comparison Error](#type-mismatch-and-comparison-error)
   - [String indexing](#string-indexing)
-  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
-  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
-  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
-  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
-  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Using `is` with `!`](#using-is-with--!)
+  - [Function with optional positional arguments](#function-with-optional-positional-arguments)
+  - [Using `await` without `async`](#using--without--)
+  - [Mixing `var` and `final`](#mixing-var-and-final)
+  - [Comparing doubles](#comparing-doubles)
   - [Recursive function with no base case](#reecursive-function-with-no-base-case)
   - [Recursive function with no base case](#reecursive-function-with-no-base-case)
   - [Recursive function with no base case](#reecursive-function-with-no-base-case)
@@ -112,7 +112,99 @@ void main() {
   print(str[0]); // Prints "H"
 }
 ```
+In Dart, you can access individual characters of a string using square brackets, as if the string were an array. This can be a WTF moment if you're coming from a language that doesn't allow string indexing.
 
+## Using `is` with `!`
+```dart
+void main() {
+  var a = "Hello";
+  if (a is! int) {
+    print("a is not an int");
+  }
+}
+```
+In Dart, you can use the `is` operator to check the type of a variable, and you can negate the result using `!`. This code will print "a is not an int" because `a` is a string.
+
+## Function with optional positional arguments
+```dart
+void main() {
+  void greet(String name, [String greeting = "Hello"]) {
+    print("$greeting, $name!");
+  }
+
+  greet("Czar"); // Prints "Hello, Czar!"
+  greet("Czar", "Hi"); // Prints "Hi, Czar!"
+}
+```
+In Dart, you can define optional positional arguments by enclosing them in square brackets. This can be a WTF moment if you're not expecting optional arguments.
+
+## Using `await` without `async`
+```dart
+Future<String> getData() async {
+  return "Data";
+}
+
+void main() {
+  var data = await getData();
+  print(data);
+}
+```
+In Dart, the await keyword is used to wait for a Future to complete, but it can only be used inside an async function. This code will produce a compiler error because main() is not declared as async.
+
+## Mixing `var` and `final`
+```dart
+void main() {
+  final var a = "Hello";
+  print(a);
+}
+```
+In Dart, `var` is used to declare a variable with inferred type, and final is used to declare a variable that can only be assigned once. This code will produce a compiler error because `var` and `final` cannot be used together.
+
+## Comparing doubles
+```dart
+void main() {
+  var a = 0.1 + 0.2;
+  var b = 0.3;
+  if (a == b) {
+    print("Equal!");
+  } else {
+    print("Not equal!");
+  }
+}
+```
+In Dart, comparing floating-point numbers can produce unexpected results due to the way they are represented in memory. This code will print "Not equal!" even though mathematically `0.1 + 0.2` is equal to `0.3`.
+
+## Using `as` with `null`
+```dart
+void main() {
+  var a = null;
+  print(a as String);
+}
+```
+In Dart, you can use the `as` operator to cast a variable to a certain type, but it will throw a runtime error if the cast fails. This code will throw a `TypeError` because `a` is `null` and cannot be cast to `String`.
+
+## Accessing private members
+```dart
+class Person {
+  String _name = "Alice";
+}
+
+void main() {
+  var p = Person();
+  print(p._name);
+}
+```
+In Dart, you can use an underscore prefix to mark a member as private, but it is still accessible from outside the class. This code will print "Alice" even though `_name` is marked as private.
+
+## Using `assert` with side effects
+```dart
+void main() {
+  var a = 0;
+  assert((a += 1) == 1);
+  print(a);
+}
+```
+In Dart, you can use the `assert` keyword to check a condition during development, but it should not have any side effects. This code will print "1" even though `a` was modified by the` assert` statement.
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.

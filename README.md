@@ -22,6 +22,23 @@ Please be sure to include a brief description of what your example demonstrates,
   - [null is not null](#null-is-not-null)
   - [This code does nothing](#this-code-does-nothing)
   - [Switch case fall-through](#switch-case-fall-through)
+  - [Recursive function with no base case](#recursive-function-with-no-base-case)
+  - [Type Mismatch and Comparison Error](#type-mismatch-and-comparison-error)
+  - [String indexing](#string-indexing)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
+  - [Recursive function with no base case](#reecursive-function-with-no-base-case)
 
 ## Null is not null
 ```dart
@@ -62,6 +79,39 @@ void main() {
 }
 ```
 In Dart, switch cases can fall through to the next case unless a break statement is used. This code will print "Two or Three" because the case 2: statement falls through to case 3:
+
+## Recursive function with no base case
+```dart
+void main() {
+  int factorial(int n) {
+    return n * factorial(n - 1);
+  }
+
+  print(factorial(5));
+}
+```
+This code defines a recursive function to calculate the factorial of a number, but there is no base case to stop the recursion. When factorial(0) is called, the function will continue to call itself with negative numbers until a stack overflow error occurs.
+
+## Type Mismatch and Comparison Error
+```dart
+void main() {
+  var x = 10;
+  var y = "20";
+
+  if (x < y) {
+    print("x is less than y");
+  }
+}
+```
+At first glance, this code might seem reasonable: you're comparing two values to see which one is less. However, it will actually throw a runtime error because x is an integer and y is a string. In Dart, you cannot directly compare values of different types, so attempting to do so will result in a type error. This can be a WTF moment if you're not expecting it.
+
+## String indexing
+```dart
+void main() {
+  var str = "Hello";
+  print(str[0]); // Prints "H"
+}
+```
 
 ## License
 

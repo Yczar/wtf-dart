@@ -205,6 +205,67 @@ void main() {
 }
 ```
 In Dart, you can use the `assert` keyword to check a condition during development, but it should not have any side effects. This code will print "1" even though `a` was modified by the` assert` statement.
+
+## Using `try` without `catch` or `finally`
+```dart
+void main() {
+  try {
+    print("Hello");
+  }
+}
+```
+In Dart, you can use the `try` keyword to enclose code that may throw an exception, but you must also use either catch or finally to handle the exception. This code will produce a compiler error because try is not followed by catch or finally
+
+## Method Chaining with the Cascade Operator
+```dart
+class Person {
+  String? name;
+  int? age;
+  void greet() => print("Hello, my name is $name and I'm $age years old.");
+}
+
+void main() {
+  var person = Person()
+    ..name = "John"
+    ..age = 30
+    ..greet();
+}
+```
+This will actually print "Hello, my name is John and I'm 30 years old.", because the cascade notation allows you to call the greet() method on the same object that you're setting the name and age properties on. This can be a bit confusing if you're not familiar with the cascade notation syntax.
+
+## Operator Precedence and Grouping
+```dart
+void main() {
+  int x = 1;
+  int y = 2;
+  print(x > 0 || y > 0 && x < y); // Output: true
+}
+```
+In this code, the `||` and `&&` operators are used to combine multiple boolean expressions. However, the order of evaluation can be unexpected. In this case, the `&&` operator has higher precedence than the `||` operator, so `y > 0 && x < y` is evaluated first, resulting in `true`. Then, `true || true` is evaluated, resulting in `true`. This can be a WTF moment if you're not familiar with operator precedence in Dart.
+
+## Copying Maps with `Map.from()`
+```dart
+void main() {
+  var source = {"a": 1, "b": 2};
+  var copy = Map.from(source);
+  copy["a"] = 3;
+  print(source); // Output: {a: 1, b: 2}
+  print(copy); // Output: {a: 3, b: 2}
+}
+```
+In this code, `Map.from()` is used to create a copy of a map `source`. However, when a value is updated in the copy, the original map is not affected. This can be a WTF moment if you're expecting the two maps to be linked together.
+
+## String Concatenation without the + Operator
+```dart
+void main() {
+  String s = "hello" " world";// Output: hello world
+  print(s);
+}
+```
+In Dart, you can concatenate strings using the `+` operator, just like in many other programming languages. However, you can also concatenate strings by simply placing them next to each other, without any operator between them.
+
+In the above code, the string "hello" and "world" are placed next to each other without any operator between them. The resulting string is "hello world", which is printed to the console. This can be a WTF moment if you're not familiar with this syntax in Dart.
+
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.

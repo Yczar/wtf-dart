@@ -25,7 +25,7 @@ Please be sure to include a brief description of what your example demonstrates,
   - [Recursive function with no base case](#recursive-function-with-no-base-case)
   - [Type Mismatch and Comparison Error](#type-mismatch-and-comparison-error)
   - [String indexing](#string-indexing)
-  - [Using `is` with `!`](#using-is-with--!)
+  - [Using `is` with `!`](#using-is-with--)
   - [Function with optional positional arguments](#function-with-optional-positional-arguments)
   - [Using `await` without `async`](#using--without--)
   - [Mixing `var` and `final`](#mixing-var-and-final)

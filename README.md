@@ -266,6 +266,41 @@ In Dart, you can concatenate strings using the `+` operator, just like in many o
 
 In the above code, the string "hello" and "world" are placed next to each other without any operator between them. The resulting string is "hello world", which is printed to the console. This can be a WTF moment if you're not familiar with this syntax in Dart.
 
+## Surprising Results with `num.parse()`
+```dart
+void main() {
+  String str1 = '42';
+  String str2 = '3.14159';
+  String str3 = '0x42';
+  int intVal = num.parse(str1).toInt();
+  double doubleVal = num.parse(str2).toDouble();
+  int hexVal = num.parse(str3).toInt();
+  print(intVal); // Output: 42
+  print(doubleVal); // Output: 3.14159
+  print(hexVal); // Output: 66
+}
+```
+This Dart code snippet demonstrates how to use the `num.parse()` method to convert strings to numbers. However, the results can be surprising due to the way Dart handles different types of numbers. In this case, the code parses three different strings as integers, doubles, and hexadecimal integers, respectively, producing unexpected output values for each.
+
+## String Interpolation with Conditional Expressions
+```dart
+void main() {
+  bool isSunny = true;
+  String message = 'It is ${isSunny ? 'sunny' : 'cloudy'} today.';
+  print(message); // Output: It is sunny today.
+}
+```
+This Dart code snippet showcases the use of conditional expressions in string interpolation. It demonstrates how the result of a conditional expression can be directly included in a string using the "${expression ? trueCase : falseCase}" syntax. In this example, the value of the boolean variable `isSunny` determines whether the string "sunny" or "cloudy" is included in the resulting message.
+
+## Behavior with Optional Variables
+```dart
+void main() {
+  String? message;
+  print(message?.toUpperCase()); // Output: null
+}
+```
+This Dart code snippet demonstrates the use of the null-aware operator with an optional variable. The null-aware operator "?." is used to call the `toUpperCase()` method on the `message` string variable, which is declared as nullable using the `String?` syntax. However, since the message variable is null, the output of the expression is also null, which may be unexpected to developers who are not familiar with the null-aware operator.
+
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
